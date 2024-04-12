@@ -42,13 +42,16 @@ while True:
             usuario = input("Digite o seu usuário:")
             senha = input("Digite a sua senha:")
 
-            if (usuario == usuarioLogado['usuario1'] and senha == senhaLogado['senha1']) or (usuario == usuarioLogado['usuario2'] and senha == senhaLogado['senha2']):
-                usuarioLogado = usuario
-                senhaLogado = senha
+
+            if (usuario == usuariologado['usuario1'] and senha == senhalogado['senha1']) or (usuario == usuariologado['usuario2'] and senha == senhalogado['senha2']):
+                usuariologado = usuario
+                senhalogado = senha
                 dinheiro = float(input("Digite a quantidade de dinheiro disponivel:"))
                 print(" -------- Caixa inicializado -------- ")
             else:
                 print("⚠ Seu usuário ou senha estão errados")
+            
+            
 
             opcao = input("Digite (V) para voltar")
             if opcao == "v" or opcao == "V":
@@ -58,7 +61,11 @@ while True:
         elif opcaoSelecionada == 2:
             print("------- Gerenciar Produtos -------")
 	    ## TODO: criar uma forma de adicionar, alterar, excluir, visualizar e pesquisar produtos do mercado (use listas ou dicionarios)
-
+            produtos = ()
+            option = (input('digite oque você deseja fazer (adicionar "1" , alterar "2", excluir "3", visualizar "4" e pesquisar produtos do mercado "5"): '))
+            if option = "1":
+              
+              
         elif opcaoSelecionada == 3:
             print("------- Passar Compras -------")
 	    ## TODO: criar uma forma de "passar as compras" dos clientes e registrar essas compras. Lembre-se que ao final você precisará exibir um relatório do dia.
