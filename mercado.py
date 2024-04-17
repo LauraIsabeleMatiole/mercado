@@ -32,7 +32,7 @@ while True:
         print("🔐 5 - Fechar Caixa")
         print("🔴 6 - Sair do Sistema")
 
-        opcaoSelecionada = int(input("Qual é sua escolha:"))
+        opcaoSelecionada = int (input("Qual é sua escolha?: "))
 
         if opcaoSelecionada == 1:
  	    ## TODO: fazer uso de funções para isolar essa funcionalidade em um bloco de código separado
@@ -61,10 +61,18 @@ while True:
         elif opcaoSelecionada == 2:
             print("------- Gerenciar Produtos -------")
 	    ## TODO: criar uma forma de adicionar, alterar, excluir, visualizar e pesquisar produtos do mercado (use listas ou dicionarios)
-            produtos = ()
-            option = (input('digite oque você deseja fazer (adicionar "1" , alterar "2", excluir "3", visualizar "4" e pesquisar produtos do mercado "5"): '))
-            if option = "1":
-              
+            option = (input(f'digite oque você deseja fazer (adicionar "1", alterar 2, excluir 3, visualizar 5 e pesquisar produtos do mercado 5): '))
+            if option == ("1"):
+              produtos = [produto]
+              print(produtos)
+              produto = input('digite o produto que você quer adicionar a listar: ')
+              produtos.append (produto)
+              print (produtos)
+            elif option == 2:
+                if produto in produtos:
+                   produto = input('digite o produto que voce quer excluir: ')
+                del produtos[produto]
+
               
         elif opcaoSelecionada == 3:
             print("------- Passar Compras -------")
@@ -76,13 +84,31 @@ while True:
         elif opcaoSelecionada == 4:
 	    ## TODO: eu acho que aqui temos um problema de segurança, verificar
             print("------- Bloqueio do caixa -------")
+            input('digite seu usuario: ')
+            if  usuario == usuariologado:
+                input('digite sua senha: ')
+            else:
+                print("⚠ Seu usuário ou senha estão errados")
+            if senha == senhalogado:
+             print ('conectado')
             resposta = input("Tem certeza que deseja bloquear o caixa? (S/N)")
             if resposta == "S" or resposta == "s":
                 bloqueado = True
                 limpar()
 
-        elif opcaoSelecionada == 5:
-            print("------- Fechar caixa ------")
+            
+                print("### 🔐 Seu caixa está bloqueado ####")
+                senha = input("digite a senha do usuário para desbloquear: ")
+            if senha == senhalogado:
+                  bloqueado = False
+            else:
+                 print("⚠ Seu usuário ou senha estão errados")
+                 opcao = input("Digite (V) para voltar")
+            if opcao == "v" or opcao == "V":
+                  
+
+            elif opcaoSelecionada == 5:
+               print("------- Fechar caixa ------")
 	    ## TODO: criar essa lógica: ao acionar o fechar caixa, deve-se exibir um relatório completo contendo
 	    ###      - O total de vendas do dia; total de dinheiro arrecadado; 
 	    ###      - O débito e o crédito devem devem se anular.
