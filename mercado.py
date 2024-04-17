@@ -105,8 +105,6 @@ while True:
                  print("⚠ Seu usuário ou senha estão errados")
                  opcao = input("Digite (V) para voltar")
             if opcao == "v" or opcao == "V":
-                  
-
             elif opcaoSelecionada == 5:
                print("------- Fechar caixa ------")
 	    ## TODO: criar essa lógica: ao acionar o fechar caixa, deve-se exibir um relatório completo contendo
