@@ -21,7 +21,7 @@ while True:
     if 'bloqueado' == True:
         print("### 🔐 Seu caixa está bloqueado ####")
         senha = input("digite a senha do usuário para desbloquear")
-        if senha == senhaLogado:
+        if senha == senhalogado:
             bloqueado = False
 
     else:
@@ -63,10 +63,10 @@ while True:
 	    ## TODO: criar uma forma de adicionar, alterar, excluir, visualizar e pesquisar produtos do mercado (use listas ou dicionarios)
             produtos = ()
             option = (input('digite oque você deseja fazer (adicionar "1" , alterar "2", excluir "3", visualizar "4" e pesquisar produtos do mercado "5"): '))
-            if option = "1":
+            if option == "1":
               
               
-        elif opcaoSelecionada == 3:
+        elif opcaoSelecionada == 3: 
             print("------- Passar Compras -------")
 	    ## TODO: criar uma forma de "passar as compras" dos clientes e registrar essas compras. Lembre-se que ao final você precisará exibir um relatório do dia.
 	    ## TODO: aqui é importante validar, se não houver produtos, não é possível passar compras.
